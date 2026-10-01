@@ -32,11 +32,11 @@ public/
 ## Como criar uma página no seu módulo
 
 1. Criem o arquivo VIEW em `app/modules/<seu-modulo>/views/<acao>.php`.
-1. Criem ou modifiquem o MODEL em `app/modules/<seu-modulo>/Model.php`.
-1. Criem ou modifiquem o Controller em `app/modules/<seu-modulo>/Controller.php`.
-2. Adicionem a rota para o arquivo dentro de `app/modules/<seu-modulo>/routes.php`,
-2. Acessem via `/<seu-modulo>/<acao>` (ex.: `/atividades/listar`).
-3. Dentro do arquivo, vocês já têm disponíveis (sem precisar de `require`):
+2. Criem ou modifiquem o MODEL em `app/modules/<seu-modulo>/Model.php`.
+3. Criem ou modifiquem o Controller em `app/modules/<seu-modulo>/Controller.php`.
+4. Adicionem a rota para o arquivo dentro de `app/modules/<seu-modulo>/routes.php`,
+5. Acessem via `/<seu-modulo>/<acao>` (ex.: `/atividades/listar`).
+6. Dentro do arquivo, vocês já têm disponíveis (sem precisar de `require`):
 
 Exemplo:
 ```php
