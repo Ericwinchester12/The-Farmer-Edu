@@ -9,7 +9,7 @@ class UsuarioController {
     public function showNovoUsuario() {
         $pdo = iniciarPDO();
         
-        echo "<h2>Testes da Atividade 10</h2>";
+        echo "<h2>Testes com banco de dados</h2>";
 
         // criando um usuario de teste
         $novo = new Usuario();
@@ -21,19 +21,19 @@ class UsuarioController {
         $novo->salvar($pdo);
         $idGerado = $novo->id;
         
-        echo "<h3>Passo 1: Salvando o usuario e mostrando o ID gerado</h3>";
+        echo "<h3>1. Criando novo usuario</h3>";
         require __DIR__ . '/views/novoUsuario.php';
 
         // testando a busca com o mesmo email
         $usuario = Usuario::buscarPorEmail($pdo, $novo->email);
         
-        echo "<h3>Passo 2: Buscando o usuario pelo email e exibindo na tela</h3>";
+        echo "<h3>2. Buscando por email</h3>";
         require __DIR__ . '/views/buscarUsuario.php';
 
         // testando o comportamento com sql injection
         $usuario = Usuario::buscarPorEmail($pdo, "' OR '1'='1");
         
-        echo "<h3>Passo 3: Teste de SQL Injection</h3>";
+        echo "<h3>3. Teste de SQL injection</h3>";
         require __DIR__ . '/views/buscarUsuario.php';
         
         // limpando os dados no final
