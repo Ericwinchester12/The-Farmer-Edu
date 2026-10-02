@@ -1,7 +1,7 @@
 <?php
 
 class Usuario {
-    public $id_usuario;
+    public $id;
     public $nome;
     public $email;
     public $senha_hash;
@@ -14,7 +14,7 @@ class Usuario {
         $stmt->execute([$this->nome, $this->email, $this->senha_hash, $this->tipo_usuario]);
         
         // pega o id que foi gerado
-        $this->id_usuario = $pdo->lastInsertId();
+        $this->id = $pdo->lastInsertId();
     }
 
     // busca as informacoes pelo email
@@ -27,7 +27,7 @@ class Usuario {
         
         if ($dados) {
             $user = new Usuario();
-            $user->id_usuario = $dados['id_usuario'];
+            $user->id = $dados['id_usuario'];
             $user->nome = $dados['nome'];
             $user->email = $dados['email'];
             $user->senha_hash = $dados['senha_hash'];
@@ -40,10 +40,10 @@ class Usuario {
 
     // metodo bonus: deleta o usuario pra manter vazio
     public function excluir(PDO $pdo): void {
-        if ($this->id_usuario) {
+        if ($this->id) {
             $sql = "DELETE FROM usuarios WHERE id_usuario = ?";
             $stmt = $pdo->prepare($sql);
-            $stmt->execute([$this->id_usuario]);
+            $stmt->execute([$this->id]);
         }
     }
 }
