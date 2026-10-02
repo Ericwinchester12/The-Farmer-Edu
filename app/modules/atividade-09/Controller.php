@@ -13,8 +13,8 @@ class UsuarioController {
 
         // criando um usuario de teste
         $novo = new Usuario();
-        $novo->nome = 'Estudante Teste';
-        $novo->email = 'aluno_' . rand(1, 10000) . '@teste.com';
+        $novo->nome = 'Flavin do Pneu';
+        $novo->email = 'Irineu_' . rand(6,7) . '@vocenãosabenemeu';
         $novo->senha_hash = password_hash('123', PASSWORD_DEFAULT);
         $novo->tipo_usuario = 'aluno';
         
