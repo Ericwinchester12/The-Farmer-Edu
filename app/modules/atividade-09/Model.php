@@ -38,7 +38,7 @@ class Usuario {
         return null;
     }
 
-    // metodo bonus: deleta o usuario pra manter limpo
+    // metodo bonus: deleta o usuario pra manter vazio
     public function excluir(PDO $pdo): void {
         if ($this->id_usuario) {
             $sql = "DELETE FROM usuarios WHERE id_usuario = ?";
