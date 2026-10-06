@@ -46,7 +46,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <p><button type="submit">Criar</button></p>
     </form>
 
-    <p><a href="/atividade-09/buscarUsuario">Buscar Usuário</a></p>
-    <p><a href="/atividade-09">Voltar</a></p>
 </body>
 </html>

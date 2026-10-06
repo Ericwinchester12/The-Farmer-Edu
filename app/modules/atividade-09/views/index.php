@@ -106,12 +106,6 @@ try {
             <div class="resultado"><?= htmlspecialchars($testes['teste3']['resultado']) ?></div>
             <div class="status"><?= $testes['teste3']['status'] ?></div>
         </div>
-
-        <div class="links">
-            <p><a href="/atividade-09/novoUsuario">Criar Novo Usuário</a></p>
-            <p><a href="/atividade-09/buscarUsuario">Buscar Usuário</a></p>
-            <p><a href="/">Voltar</a></p>
-        </div>
     </div>
 </body>
 </html>
